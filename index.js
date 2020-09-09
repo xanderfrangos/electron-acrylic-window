@@ -82,7 +82,7 @@ function isInSnapZone() {
     const display = screen.getDisplayNearestPoint(point)
 
     // Check if cursor is near the left/right edge of the active display
-    if ((point.x > display.bounds.x - 20 && point.x < display.bounds.x + 20) || (point.x > display.bounds.x + display.bounds.width - 20 && point.x < display.bounds.x + display.bounds.width + 20)) {
+    if ((point.x > display.bounds.x - 20 && point.x < display.bounds.x + 20) || (point.x > display.bounds.x + display.bounds.width - 20 && point.x < display.bounds.x + display.bounds.width + 20) || (point.x === display.bounds.x + (display.bounds.width/2))) {
         return true
     }
     return false
